@@ -10,16 +10,22 @@ class PiggyRender extends Component {
         return pigImage
     }
 
+    cardReveal = (e) => {
+        console.log(e.target)
+        console.log(this.props.piggy)
+    }
+
     render() {
-        console.log(this)
+        console.log(this.props)
         return(
             <div>
                 {/* changeName(name) */}
                 <h1>{this.props.piggy.name}</h1>
                 <img  src={this.renderImage()} alt=""/>
                 <p>{this.props.piggy.greased}</p>
-                <p>{this.props.piggy.weight}</p>
-                <p>{this.props.piggy.specialty}</p>
+                <p>My Weight: {this.props.piggy.weight}</p>
+                <p>My Specialty: {this.props.piggy.specialty}</p>
+                <a onClick={e => this.cardReveal(e)}>Click My Photo to Learn More</a>
             </div>
         )
     }

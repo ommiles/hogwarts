@@ -9,10 +9,14 @@ import PiggyRender from './PiggyRender.js';
 // BONUS: handeDelete function from PiggyRender
 
 class HelloWorld extends Component {
+
+  state = {
+        
+  }
   
   render() {
     return (
-      <div>
+      <div id="piggy-container">
         {this.props.hogs.map(piggy => (
           <PiggyRender key={piggy.name} piggy={piggy}/>
           ))}
