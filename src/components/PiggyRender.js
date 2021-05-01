@@ -5,23 +5,24 @@ import React, { Component } from 'react';
 
 class PiggyRender extends Component {
     
-    changeName = (name) => {
-        let newName = name.replace(/\s/g, '_')
-        return newName
+    renderImage = () => {
+        let pigImage = require(`../hog-imgs/${this.props.piggy.name.toLowerCase().split(' ').join('_')}.jpg`)
+        return pigImage
     }
 
     render() {
+        console.log(this)
         return(
             <div>
                 {/* changeName(name) */}
-                <h1>{this.props.name}</h1>
-                <img src={require(`../hog-imgs/${this.changeName(this.props.name)}.jpg`)} alt=""/>
-                <p>{this.props.greased}</p>
-                <p>{this.props.weight}</p>
-                <p>{this.props.specialty}</p>
+                <h1>{this.props.piggy.name}</h1>
+                <img  src={this.renderImage()} alt=""/>
+                <p>{this.props.piggy.greased}</p>
+                <p>{this.props.piggy.weight}</p>
+                <p>{this.props.piggy.specialty}</p>
             </div>
         )
     }
 }
 
-export default PiggyRender
+export default PiggyRender;
