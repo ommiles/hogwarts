@@ -1,18 +1,7 @@
 import React, { Component } from "react";
 import PiggyRender from './PiggyRender.js';
 
-// filter the hogs that are greased
-// sort the hogs based on name
-// sort the hogs based on weight
-
-// handleClick function for PiggyRender
-// BONUS: handeDelete function from PiggyRender
-
-class HelloWorld extends Component {
-
-  state = {
-        
-  }
+class PiggyContainer extends Component {
   
   render() {
     return (
@@ -25,4 +14,4 @@ class HelloWorld extends Component {
   }
 }
 
-export default HelloWorld;
+export default PiggyContainer;
