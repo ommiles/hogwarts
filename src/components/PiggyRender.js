@@ -1,31 +1,34 @@
 import React, { Component } from 'react';
-
-// a functional component to render each hog name and picture in a tile
-// render each hog name and picture in a tile
+import PiggyDetails from './PiggyDetails'
 
 class PiggyRender extends Component {
-    
-    renderImage = () => {
-        let pigImage = require(`../hog-imgs/${this.props.piggy.name.toLowerCase().split(' ').join('_')}.jpg`)
-        return pigImage
-    }
 
+    state = {
+        details: false
+    }
+    
     cardReveal = (e) => {
         console.log(e.target)
         console.log(this.props.piggy)
+        this.setState({
+            details: !this.state.details
+        })
+    }
+
+    renderImage = () => {
+        let pigImage = require(`../hog-imgs/${this.props.piggy.name.toLowerCase().split(' ').join('_')}.jpg`)
+        return pigImage
     }
 
     render() {
         console.log(this.props)
         return(
             <div>
-                {/* changeName(name) */}
                 <h1>{this.props.piggy.name}</h1>
                 <img  src={this.renderImage()} alt=""/>
                 <p>{this.props.piggy.greased}</p>
-                <p>My Weight: {this.props.piggy.weight}</p>
-                <p>My Specialty: {this.props.piggy.specialty}</p>
-                <a onClick={e => this.cardReveal(e)}>Click My Photo to Learn More</a>
+                <a onClick={this.cardReveal}>Click Here to Learn More</a>
+                {this.state.details ? <PiggyDetails piggy={this.props.piggy} /> : null}
             </div>
         )
     }
