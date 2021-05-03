@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PiggyDetails = (piggy) => {
+const PiggyDetails = ({piggy}) => {
         console.log(piggy)
         return (
             <div>

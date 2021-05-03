@@ -16,8 +16,8 @@ class PiggyRender extends Component {
     }
 
     renderImage = () => {
-        let pigImage = require(`../hog-imgs/${this.props.piggy.name.toLowerCase().split(' ').join('_')}.jpg`)
-        return pigImage
+        let filename = require(`../hog-imgs/${this.props.piggy.name.toLowerCase().split(' ').join('_')}.jpg`)
+        return filename
     }
 
     render() {
