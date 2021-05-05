@@ -9,11 +9,6 @@ class App extends Component {
     return (
       <div className='App'>
         <Nav />
-        <div className='filterWrapper'>
-          <button>Filter by Greased</button>
-          <button>Sort by Name</button>
-          <button>Sort by Weight</button>
-        </div>
         <PiggyContainer hogs={hogs}/>
       </div>
     );
