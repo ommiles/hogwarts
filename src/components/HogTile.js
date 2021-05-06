@@ -1,17 +1,30 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function HogTile({ hog }) {
+export default class HogTile extends Component {
 
     state = {
         show: true
     }
 
-    const filename = hog.name.toLowerCase().split(' ').join('_')
-    const pigImage = require(`../hog-imgs/${filename}.jpg`)
-    return (
-        <div className='ui eight wide column pigTile' >
-            <h3>{hog.name}</h3>
-            <img src={pigImage} className='' />
-        </div>
-    )
+    render() {
+
+        const { hog, chooseHog } = this.props
+        const filename = hog.name.toLowerCase().split(' ').join('_')
+        const pigImage = require(`../hog-imgs/${filename}.jpg`)
+        
+        return (
+            <div className="ui pink card" style={this.state.show ? {} : {display: 'none'}} >
+                <div className='image'>
+                    <img onClick={() => chooseHog(hog)} src={pigImage} alt="a cute pig" />
+                </div>
+                <div className="content">
+                    <div className="header">{hog.name}</div>
+                </div>
+                <div onClick={()=> this.setState({show: false})} className="ui bottom attached button">
+                    Hide Hog
+                </div>
+            </div>
+        )
+    }
+    
 }

@@ -1,7 +1,8 @@
-import piggy from "../porco.png";
-import React from "react";
+import piggy from "../porco.png"
+import React from "react"
 
 const Header = () => {
+
   return (
     <div className="navWrapper">
       <span className="headerText">Hogwarts</span>
@@ -10,7 +11,8 @@ const Header = () => {
       </div>
       <span className="normalText">A React App for County Fair Hog Fans</span>
     </div>
-  );
-};
+  )
+  
+}
 
-export default Header;
+export default Header
