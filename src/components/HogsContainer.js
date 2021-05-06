@@ -8,6 +8,7 @@ export default class HogsContainer extends Component {
         return (
             <div>
                 <h1>Hello! This is Hogs Container!</h1>
+                <FilterSort />
                 <HogsList />
                 <HogDetail />
             </div>
