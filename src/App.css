@@ -42,7 +42,7 @@
   font-family: Georgia, serif;
   font-size: .75em;
 }
-/* 
+
 .hoggyText {
   font-size: 1.5em;
 }
@@ -122,52 +122,19 @@ ul {
 }
 
 
-
-
-.footer {
-  padding: 1%;
-  clear: both;
-} */
-
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
   height: 80px;
   transition: all .2s ease-in-out;
 }
 
+.footer {
+  padding: 1%;
+  clear: both;
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-/* MILES' CSS: */
-
-.App-logo {
-  width: 100px;
-  height: 100px;
-}
-
-#piggy-container {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  justify-items: center;
-}
-
-#piggy-container::-webkit-scrollbar {    
-  display: none;
-}
-
-#piggy-container div {
-  margin: 20px;
-}
-
-
-img {
-  width: 250px;
-  height: 250px;
-}
-
-a {
-  cursor: pointer;
 }
