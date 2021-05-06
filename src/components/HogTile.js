@@ -2,6 +2,10 @@ import React from 'react'
 
 export default function HogTile({ hog }) {
 
+    state = {
+        show: true
+    }
+
     const filename = hog.name.toLowerCase().split(' ').join('_')
     const pigImage = require(`../hog-imgs/${filename}.jpg`)
     return (
